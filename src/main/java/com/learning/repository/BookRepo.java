@@ -7,7 +7,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.time.LocalDate;
-
+@Repository
 public interface BookRepo extends JpaRepository<Book,Integer> {
 
     Page<Book> findByTitleContainingIgnoreCase(String title, Pageable pageable);
